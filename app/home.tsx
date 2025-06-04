@@ -17,7 +17,6 @@ import {
   Mail,
   ArrowRight,
   CheckCircle,
-  Link as LinkIcon,
 } from "lucide-react";
 import Link from "next/link";
 
