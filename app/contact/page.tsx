@@ -43,7 +43,7 @@ export default function page() {
                     </div>
                     <div>
                       <p className="text-gray-300">Call Us</p>
-                      <p className="text-xl font-bold">+86 188 2001 4418</p>
+                      <p className="text-xl font-bold">+86 198 5448 8204</p>
                     </div>
                   </div>
 

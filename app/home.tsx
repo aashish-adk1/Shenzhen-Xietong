@@ -17,7 +17,9 @@ import {
   Mail,
   ArrowRight,
   CheckCircle,
+  Link as LinkIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 const SabitriSZX = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -26,8 +28,7 @@ const SabitriSZX = () => {
   const services = [
     {
       id: "education",
-      logo: "https://sabitriedu.com/images/main-logo.jpg",
-      title: "SabitriEdu",
+      title: "Education",
       subtitle: "Global Education Services",
       desc: "Study in USA & China with scholarships and complete visa support",
       features: [
@@ -41,8 +42,7 @@ const SabitriSZX = () => {
     },
     {
       id: "travel",
-      logo: "https://www.sabitritours.com/assets/images/tour/image1.svg",
-      title: "SabitriTours",
+      title: "Tours and Travel",
       subtitle: "Travel & Tourism",
       desc: "Explore stunning destinations with our comprehensive travel packages",
       features: [
@@ -56,8 +56,7 @@ const SabitriSZX = () => {
     },
     {
       id: "trade",
-      logo: "https://sabitritrade.com/images/sabitrit/Logo.svg",
-      title: "SabitriTrade",
+      title: "Trade",
       subtitle: "Import & Export",
       desc: "Your gateway to seamless international trade and logistics",
       features: [
@@ -71,8 +70,7 @@ const SabitriSZX = () => {
     },
     {
       id: "ai",
-      logo: "https://sabitriaidata.com/assets/images/sabitir/logo-3.png",
-      title: "SabitriAI",
+      title: "AI",
       subtitle: "AI Solutions",
       desc: "Advanced AI-powered transcription, translation, and data solutions",
       features: [
@@ -219,15 +217,6 @@ const SabitriSZX = () => {
                       key={idx}
                       className="flex items-center space-x-2 bg-white/40 backdrop-blur-sm p-3 rounded-xl"
                     >
-                      <div className="relative w-8 h-8 flex-shrink-0">
-                        <Image
-                          src={service.logo}
-                          alt={service.title}
-                          width={32}
-                          height={32}
-                          className="rounded object-contain"
-                        />
-                      </div>
                       <span className="text-sm font-medium text-gray-700">
                         {service.title}
                       </span>
@@ -237,11 +226,13 @@ const SabitriSZX = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Link href="/services" passHref>
                   <button className="group bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
                     <Star className="w-5 h-5" />
                     <span>Explore Services</span>
                     <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
+                  </Link>
                 </div>
 
                 {/* Contact Info */}
@@ -280,17 +271,6 @@ const SabitriSZX = () => {
                     className={`relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500 bg-gradient-to-br ${services[activeService].bgGradient}`}
                   >
                     <div className="p-8 lg:p-12">
-                      <div className="mb-6">
-                        <div className="relative w-16 h-16">
-                          <Image
-                            src={services[activeService].logo}
-                            alt={`${services[activeService].title} logo`}
-                            width={64}
-                            height={64}
-                            className="object-contain"
-                          />
-                        </div>
-                      </div>
                       <h3 className="text-3xl font-bold text-gray-900 mb-4">
                         {services[activeService].title}
                       </h3>
@@ -309,11 +289,12 @@ const SabitriSZX = () => {
                             </div>
                           )
                         )}
-                      </div>
-                      <button className="mt-6 bg-white/80 backdrop-blur-sm text-gray-900 px-6 py-3 rounded-xl font-semibold hover:bg-white transition-all duration-300 flex items-center space-x-2">
-                        <span>Learn More</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
+                      <Link href="/services">
+                        <button className="mt-6 bg-white/80 backdrop-blur-sm text-gray-900 px-6 py-3 rounded-xl font-semibold hover:bg-white transition-all duration-300 flex items-center space-x-2">
+                          <span>Learn More</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </button>
+                      </Link>
                     </div>
                   </div>
 
@@ -335,6 +316,7 @@ const SabitriSZX = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
@@ -385,19 +367,6 @@ const SabitriSZX = () => {
                 key={index}
                 className={`group bg-gradient-to-br ${service.bgGradient} p-8 rounded-3xl shadow-lg border border-white/50 hover:shadow-2xl transform hover:scale-105 transition-all duration-500`}
               >
-                {/* Logo container with proper sizing */}
-                <div className="w-16 h-16 bg-white/20 p-2 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <div className="relative w-12 h-12">
-                    <Image
-                      src={service.logo}
-                      alt={`${service.title} logo`}
-                      width={48}
-                      height={48}
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {service.title}
                 </h3>
@@ -415,6 +384,7 @@ const SabitriSZX = () => {
                   ))}
                 </div>
 
+                  <Link href="/services" passHref>
                 <button className="w-full bg-white/80 backdrop-blur-sm text-gray-900 py-3 rounded-xl font-semibold hover:bg-white transition-all duration-300 flex items-center justify-center gap-2 group">
                   Explore
                   <svg
@@ -428,10 +398,11 @@ const SabitriSZX = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className="transition-all duration-300 transform group-hover:translate-x-1"
-                  >
+                    >
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </button>
+                    </Link>
               </div>
             ))}
           </div>

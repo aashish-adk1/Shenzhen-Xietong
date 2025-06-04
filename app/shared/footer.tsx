@@ -1,13 +1,13 @@
 "use client";
 import React from 'react'
-import { Globe,Phone,Mail,MapPin,Clock,GraduationCap,Plane,Package,Brain, } from 'lucide-react';
+import { Phone,Mail,MapPin,Clock,GraduationCap,Plane,Package,Brain, } from 'lucide-react';
 
 export default function footer() {
      const services = [
         {
             id: 'education',
             icon: GraduationCap,
-            title: 'SabitriEdu',
+            title: 'Education',
             subtitle: 'Global Education Services',
             desc: 'Study in USA & China with scholarships and complete visa support',
             features: ['Scholarship Guidance', 'University Matching', 'Visa Counselling', 'Application Support'],
@@ -17,7 +17,7 @@ export default function footer() {
         {
             id: 'travel',
             icon: Plane,
-            title: 'SabitriTours',
+            title: 'Tours and travels',
             subtitle: 'Travel & Tourism',
             desc: 'Explore stunning destinations with our comprehensive travel packages',
             features: ['Tour Packages', 'Flight Booking', 'Hotel Reservations', 'Visa Services'],
@@ -27,7 +27,7 @@ export default function footer() {
         {
             id: 'trade',
             icon: Package,
-            title: 'SabitriTrade',
+            title: 'Trade',
             subtitle: 'Import & Export',
             desc: 'Your gateway to seamless international trade and logistics',
             features: ['Import/Export Services', 'Customs Clearance', 'Logistics Solutions', 'Product Sourcing'],
@@ -37,7 +37,7 @@ export default function footer() {
         {
             id: 'ai',
             icon: Brain,
-            title: 'SabitriAI',
+            title: 'AI',
             subtitle: 'AI Solutions',
             desc: 'Advanced AI-powered transcription, translation, and data solutions',
             features: ['Smart Recording', 'AI Transcription', 'Real-time Translation', 'Data Analytics'],
@@ -62,13 +62,6 @@ export default function footer() {
                             <p className="text-gray-400 leading-relaxed">
                                 Your trusted global partner for education, travel, trade, AI solutions, and healthcare services worldwide.
                             </p>
-                            <div className="flex space-x-4">
-                                {['facebook', 'twitter', 'linkedin', 'instagram'].map((social) => (
-                                    <button key={social} className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
-                                        <Globe className="w-5 h-5" />
-                                    </button>
-                                ))}
-                            </div>
                         </div>
 
                         {/* Services */}
@@ -90,7 +83,7 @@ export default function footer() {
                         <div>
                             <h3 className="text-lg font-bold mb-6">Quick Links</h3>
                             <ul className="space-y-3">
-                                {['About Us', 'Our Team', 'Success Stories', 'Blog', 'Careers', 'Support'].map((link) => (
+                                {['Home','About Us', 'Services', 'Contact'].map((link) => (
                                     <li key={link}>
                                         <a href="#" className="text-gray-400 hover:text-white transition-colors">
                                             {link}
@@ -106,7 +99,7 @@ export default function footer() {
                             <div className="space-y-4">
                                 <div className="flex items-center space-x-3">
                                     <Phone className="w-5 h-5 text-blue-400" />
-                                    <span className="text-gray-400">+86 188 2001 4418</span>
+                                    <span className="text-gray-400">+86 198 5448 8204</span>
                                 </div>
                                 <div className="flex items-center space-x-3">
                                     <Mail className="w-5 h-5 text-blue-400" />
