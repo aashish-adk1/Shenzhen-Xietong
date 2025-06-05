@@ -22,9 +22,9 @@ export default function Navbar() {
                 <Image
                   src={Logo}
                   alt="Sabitri SZX"
-                  width={120} // adjust as needed
-                  height={40} // adjust as needed
-                  className="h-10 w-auto"
+                  width={120} 
+                  height={40} 
+                  className="h-15 w-auto rounded-lg"
                 />
               </Link>
             </div>

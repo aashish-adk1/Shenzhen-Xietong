@@ -87,8 +87,7 @@ const SabitriSZX = () => {
     {
       name: "Dr. Dewakar Chauhan",
       role: "Medical Student - China",
-      service: "SabitriEdu",
-      text: "SabitriEdu made my dream of studying medicine in China a reality. The scholarship guidance and visa support were exceptional.",
+      text: "Education made my dream of studying medicine in China a reality. The scholarship guidance and visa support were exceptional.",
       rating: 5,
       image:
         "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face",
@@ -96,7 +95,6 @@ const SabitriSZX = () => {
     {
       name: "Priya Sharma",
       role: "Business Owner",
-      service: "SabitriTrade",
       text: "Outstanding logistics support for our import business. Their tracking systems and reliability have transformed our operations.",
       rating: 5,
       image:
@@ -114,8 +112,7 @@ const SabitriSZX = () => {
     {
       name: "Tech Startup CEO",
       role: "Technology Leader",
-      service: "SabitriAI",
-      text: "SabitriAI's transcription and translation services have streamlined our global communications significantly.",
+      text: "AI's transcription and translation services have streamlined our global communications significantly.",
       rating: 5,
       image:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
@@ -298,7 +295,7 @@ const SabitriSZX = () => {
                   </div>
 
                   {/* Service Navigation Dots */}
-                  <div className="flex justify-center space-x-2 mt-6">
+                  <div className="flex justify-center space-x-2 mt-6 pb-10">
                     {services.map((_, index) => (
                       <button
                         key={index}
@@ -350,7 +347,7 @@ const SabitriSZX = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Complete Global
-              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent pb-10">
                 Service Ecosystem
               </span>
             </h2>
@@ -422,7 +419,7 @@ const SabitriSZX = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Success Stories from
-              <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent pb-10">
                 Our Global Community
               </span>
             </h2>
