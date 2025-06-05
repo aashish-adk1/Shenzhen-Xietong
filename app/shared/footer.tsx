@@ -92,8 +92,8 @@ export default function footer() {
                   <Image
                     src={Logo}
                     alt="Sabitri SZX"
-                    width={120} 
-                    height={40} 
+                    width={120}
+                    height={40}
                     className="h-30 w-auto"
                   />
                 </Link>
@@ -109,14 +109,12 @@ export default function footer() {
               <h3 className="text-lg font-bold mb-6">Our Services</h3>
               <ul className="space-y-3">
                 {services.map((service) => (
-                  <li key={service.id}>
-                    <a
-                      href={`#${service.id}`}
-                      className="text-gray-400 hover:text-white transition-colors flex items-center space-x-2"
-                    >
-                      <service.icon className="w-4 h-4" />
-                      <span>{service.title}</span>
-                    </a>
+                  <li
+                    key={service.id}
+                    className="text-gray-400 hover:text-white transition-colors flex items-center space-x-2"
+                  >
+                    <service.icon className="w-4 h-4" />
+                    <span>{service.title}</span>
                   </li>
                 ))}
               </ul>
@@ -126,10 +124,10 @@ export default function footer() {
             <div>
               <h3 className="text-lg font-bold mb-6">Quick Links</h3>
               <ul className="space-y-3">
-                {["Home", "About Us", "Services", "Contact"].map((link) => (
+                {["Home", "About", "Services", "Contact"].map((link) => (
                   <li key={link}>
                     <a
-                      href="#"
+                      href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
                       className="text-gray-400 hover:text-white transition-colors"
                     >
                       {link}
